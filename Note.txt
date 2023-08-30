@@ -1,0 +1,12 @@
+Finance App
+Load button:from external ---> connect to Database
+https://www.youtube.com/watch?v=teBfyozQj4w
+
+Add Purchase 
+Search transactions
+Remove Purchase 
+Display data
+Load more data from external
+export Data
+Exit
+
