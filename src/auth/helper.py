@@ -44,7 +44,7 @@ def load_env_vars():
     load_dotenv(dotenv_path=env_path)
     
     # Now set the global variables
-    global hosts, u, us, passwords, databases
+    global hosts, u, us, passwords, databases, p
     hosts = os.environ.get('DB_HOST')
     u = os.environ.get('DB_USER')
     us = os.environ.get('DB_USERS')
@@ -109,7 +109,6 @@ def create_login_frame(window):
     LogFrame.place(x=300, y=100)
 
     ##Imahine declarations
-    
 
 
     logoLabel = Label(LogFrame, image=userImage)

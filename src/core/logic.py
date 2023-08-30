@@ -71,7 +71,7 @@ def db_connect(root,table):
 
     messagebox.showinfo('Success', 'Database Connection is successful', parent=root)
     auto_refresh(2000,root,table)
-    pass
+    return True
 
 def execute_db_query(query, params=()):
     if con and mycursor:
@@ -119,8 +119,7 @@ def update_table_from_database(root,table):
 
 def auto_refresh(interval, root,table):
     update_table_from_database(root, table)
-    root.after(interval, auto_refresh(interval, root, table))
-    pass 
+    root.after(interval, lambda: auto_refresh(interval, root, table))
 
 
 def search_Data(dateEntry, descrEntry,amountEntry,classEntry,entryScreen,table):

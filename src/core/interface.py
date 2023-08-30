@@ -94,6 +94,7 @@ def enable_buttons():
     displayData['state'] = NORMAL
     loadData['state'] = NORMAL
     exportData['state'] = NORMAL
+    Connect['state'] = DISABLED
 
 def new_db_connect():
     conn = db_connect(root,table)
