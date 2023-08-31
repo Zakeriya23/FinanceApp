@@ -37,14 +37,15 @@ def set_style(window):
     lockImage=PhotoImage(file='../image/lock.png')
 
 def load_env_vars():
+    current_directory = Path(__file__).resolve().parent
     # Specify the path to the .env file
-    env_path = Path('.') / 'key' / '.env'
+    env_path = current_directory / '..' / 'key' / '.env'
     
     # Load the .env file
     load_dotenv(dotenv_path=env_path)
     
     # Now set the global variables
-    global hosts, u, us, passwords, databases, p
+    global hosts, u, us, passwords, databases
     hosts = os.environ.get('DB_HOST')
     u = os.environ.get('DB_USER')
     us = os.environ.get('DB_USERS')
